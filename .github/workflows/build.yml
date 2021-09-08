@@ -37,7 +37,7 @@ jobs:
       
       - name: Build ZFS
         run: |
-          docker run --rm -e ZOL_VERSION=2.1.0 -w /src -v $PWD:/src  /src/build.sh
+          docker run --rm -e ZOL_VERSION=2.1.0 -w /src -v $PWD:/src jepio/torcx-zfs-flatcar-dev-container:latest /src/build.sh
 
       - name: Archive code coverage results
         uses: actions/upload-artifact@v2
